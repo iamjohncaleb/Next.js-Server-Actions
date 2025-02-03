@@ -27,37 +27,35 @@ This repository demonstrates the usage of **Next.js Server Actions**, a new feat
 ## 📦 Installation & Setup  
 
 ### **1. Clone the Repository**  
-```bash
+
 git clone https://github.com/yourusername/nextjs-server-actions.git
 cd nextjs-server-actions
-```
+
 
 ### **2. Install Dependencies**  
-```bash
 npm install
 # or
 yarn install
-```
 
 ### **3. Set Up Environment Variables**  
 Create a `.env.local` file in the root directory and add any required variables:  
-```plaintext
+
 DATABASE_URL=your_database_url
 NEXTAUTH_SECRET=your_secret_key
-```
+
 
 ### **4. Start the Development Server**  
-```bash
+
 npm run dev
 # or
 yarn dev
-```
+
 Visit [http://localhost:3000](http://localhost:3000) in your browser.  
 
----
+
 
 ## 📂 Folder Structure  
-```plaintext
+
 ├── app                // Next.js app directory
 │   ├── actions        // Server actions (handle form submissions, mutations)
 │   ├── components     // UI components
@@ -68,15 +66,13 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 ├── public             // Static assets
 ├── prisma             // (Optional) Database schema (for Prisma ORM)
 └── README.md          // Project documentation
-```
 
----
 
 ## ✅ Example Server Action  
 
 Here’s a simple example of a server action that **submits a form** and saves data to a database:  
 
-```tsx
+
 "use server";
 
 import { db } from "@/lib/db"; // Database connection
@@ -95,10 +91,10 @@ export async function createUser(data: FormData) {
 
   return { success: true };
 }
-```
+
 
 **Usage in a Component:**  
-```tsx
+
 "use client";
 
 import { useState } from "react";
@@ -111,7 +107,6 @@ export default function SignUpForm() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const response = await createUser(formData);
-    
     setMessage(response.success ? "User created!" : "Error occurred.");
   }
 
@@ -124,9 +119,6 @@ export default function SignUpForm() {
     </form>
   );
 }
-```
-
----
 
 ## 🔗 Deployment  
 
@@ -136,29 +128,25 @@ export default function SignUpForm() {
 
 ---
 
-## 👥 Contributing  
+## 🤝 Contributing
 
-1. Fork the repository.  
-2. Create a new feature branch (`git checkout -b feature-branch`).  
-3. Commit your changes (`git commit -m "Added new feature"`).  
-4. Push to your branch (`git push origin feature-branch`).  
-5. Submit a pull request.  
+Contributions are welcome! Here's how you can help:
+Let me know if you'd like adjustments or additional sections! 😊
 
----
-
-## 📜 License  
-
-This project is licensed under the **MIT License**.  
+1. Fork this repository.
+2. Create a branch for your feature or bug fix.
+3. Submit a pull request with a detailed description of your changes.
 
 ---
 
-## 📞 Contact  
-
-- **Author**: Daniella Obiagwuna  
-- **Email**: [your-email@example.com](mailto:your-email@example.com)  
-- **GitHub**: [your-github-profile](https://github.com/yourusername)  
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)  
+### License
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Let me know if you’d like any modifications or additional details! 😊🚀
+Let me know if you'd like to refine it further! 🚀
+- Name: Caleb John
+- Email: [My-email](mailto:johncaleb022@gmail.com)  
+- LinkedIn: [My LinkedIn](https://www.linkedin.com/in/caleb-john-48a1bb29a)
+
+---
