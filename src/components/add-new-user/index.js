@@ -1,4 +1,3 @@
-
 "use client";
 
 import { addNewUserAction, editUserAction } from "@/actions";
